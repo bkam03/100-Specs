@@ -624,6 +624,24 @@ Garden.prototype.grow = function (){
  *
  */
 
+function SolarSystem (){
+  this.planets = [];
+}
+
+SolarSystem.prototype.addPlanet = function ( newPlanet ){
+  this.planets.push( newPlanet );
+};
+
+SolarSystem.prototype.removePlanet = function ( planetToRemove ){
+  var planetPosition = this.planets.indexOf( planetToRemove );
+  if( planetToRemove === undefined ) {
+    this.planets.pop();
+  } else if( planetPosition > -1 ){
+    this.planets.splice( planetPosition, 1 );
+  } else {
+    return 'not a planet in this system';
+  }
+};
 
 /* Step 33
  *
