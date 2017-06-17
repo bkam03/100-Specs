@@ -471,7 +471,7 @@ function favoritePlanet ( currentPlanet ){
  *
  */
 
-class Person {
+/*class Person {
   constructor ( name, money, age, gender ){
     this.name = name;
     this.money = money;
@@ -486,7 +486,22 @@ class Person {
   earnMoney ( amount ){
     this.money += amount;
   }
+}*/
+
+function Person ( name, money, age, gender ){
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
 }
+
+Person.prototype.spendMoney = function ( amount ){
+  this.money -= amount;
+};
+
+Person.prototype.earnMoney = function ( amount ){
+  this.money += amount;
+};
 
 /* Step 28
  *
@@ -676,6 +691,40 @@ SolarSystem.prototype.removePlanet = function ( planetToRemove ){
  *
  */
 
+function PrincessLeia ( name, money, age, gender ){
+  this.isInTrouble = null;
+  Person.call( this, name, money, age, gender );
+}
+
+PrincessLeia.prototype = Object.create( Person.prototype, {
+  constructor : PrincessLeia
+} );
+
+PrincessLeia.prototype.shootsGun = function (){
+  this.isInTrouble = false;
+  return 'Leia shoots her gun wildly';
+};
+
+PrincessLeia.prototype.getsInTrouble = function (){
+  this.isInTrouble = true;
+  return 'Help me Obi-wan Kenobi, you\'re my only hope.';
+};
+
+PrincessLeia.prototype.marries = function ( person ){
+  var result = false;
+
+  switch( person ){
+    case 'Han Solo':
+      result = true;
+      break;
+    case 'Luke Skywalker':
+      result = 'Gross!';
+    default:
+      break;
+  }
+
+  return result;
+};
 
 /* Step 34
  *
