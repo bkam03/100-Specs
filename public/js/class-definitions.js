@@ -171,7 +171,6 @@ var domains = {
 
 var rainbow = {
   colors : {
-
     red : "#F0280A",
     orange : "#FF8800",
     yellow : "#FFDD00",
@@ -197,6 +196,7 @@ var rainbow = {
  *
  */
 
+ var linuxFlavors = ['Gentoo', 'Fedora', 'Debian', 'Slackware', 'Red Hat', 'Bieber Linux'];
 
 /* Step 15
  *
