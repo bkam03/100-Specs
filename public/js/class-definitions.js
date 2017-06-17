@@ -261,6 +261,7 @@ var livingOrganismClassification = ['Kingdom', 'Phylum', 'Class', 'Order', 'Fami
  *
  */
 
+ scmList = ['git', 'svn', 'mercurial', 'bazaar', 'cvs'];
 
 /* Step 19
  *
