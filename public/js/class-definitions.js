@@ -434,6 +434,19 @@ function browseURL ( browserName ){
  *
  */
 
+function favoritePlanet ( currentPlanet ){
+  var returnString = '';
+
+  if( planets.indexOf( currentPlanet ) > -1 ){
+    var randomPlanetNumber = Math.floor( Math.random() * planets.length );
+    var randomPlanet = planets[ randomPlanetNumber ];
+    returnString = `I\'m from ${currentPlanet}, but I wish I could go to ${randomPlanet}.`;
+  } else {
+    returnString = `${currentPlanet} is not a planet!`;
+  }
+
+  return returnString;
+}
 
 /* Step 27
  *
