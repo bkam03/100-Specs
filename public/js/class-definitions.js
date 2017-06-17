@@ -330,6 +330,13 @@ function addNumbers (num1, num2){
  *
  */
 
+function installLinux (linuxType){
+  var isLinuxFlavor = false;
+  if( linuxFlavors.indexOf( linuxType ) > -1 ){
+    isLinuxFlavor = true;
+  }
+  return isLinuxFlavor;
+}
 
 /* Step 23
  *
