@@ -500,6 +500,15 @@ class Person {
  *
  */
 
+function purchaseLaptop ( laptopName ){
+  var laptopCost = -1;
+
+  if( laptopName in laptopCosts ){
+    laptopCost = laptopCosts[ laptopName ].toString();
+  }
+
+  return laptopCost;
+}
 
 /* Step 29
  *
@@ -513,6 +522,15 @@ class Person {
  *
  */
 
+function canTalkAbout ( club ){
+  var isDiscussable = false;
+
+  if( club !== club_name ){
+    isDiscussable = true;
+  }
+
+  return isDiscussable;
+}
 
 /* Step 30
  *
