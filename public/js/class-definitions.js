@@ -402,6 +402,17 @@ function browseURL ( browserName ){
  *
  */
 
+ function listLivingOrgClass (){
+  var listofOrg = `<ul>`;
+
+  for( var i = 0; i < livingOrganismClassification.length; i++ ){
+    listofOrg += `<li>${ livingOrganismClassification[ i ] }</li>`;
+  }
+
+  listofOrg += '</ul>';
+  return listofOrg;
+ }
+
 
 /* Step 26
  *
