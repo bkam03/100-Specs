@@ -313,6 +313,10 @@ function sahara_river (){
  *
  */
 
+function addNumbers (num1, num2){
+  var sum = num1 + num2;
+  return sum;
+}
 
 /* Step 22
  *
