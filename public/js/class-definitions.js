@@ -356,6 +356,19 @@ function installLinux (linuxType){
  *
  */
 
+function drink ( beerName ){
+  var beerDescription = false;
+  if( beers.hasOwnProperty( beerName ) === true ){
+      beerDescription = `This ${beerName} is `
+    if( Array.isArray( beers[ beerName ] ) ) {
+      beerDescription +=  `${beers[ beerName ].join(' and ')}`;
+    } else {
+      beerDescription += `${ beers[ beerName ] }`;
+    }
+      beerDescription += '.';
+  }
+  return beerDescription;
+}
 
 /* Step 24
  *
