@@ -62,6 +62,8 @@ var galilean_moons = [ 'Io', 'Europa', 'Ganymede', 'Callisto' ];
  *
  */
 
+ var earths_water_composition = .71;
+
 
 /* Step 8
  *
