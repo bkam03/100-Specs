@@ -382,6 +382,15 @@ function drink ( beerName ){
  *
  */
 
+function browseURL ( browserName ){
+  var browserUrl = false;
+
+  if( browserName in browsers ){
+    browserUrl = browsers[ browserName ];
+  }
+
+  return browserUrl;
+}
 
 /* Step 25
  *
