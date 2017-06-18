@@ -1239,6 +1239,25 @@ var dinner = new Meal( 'fish and vegetables' );
  *
  */
 
+Animal.prototype.isWarmBlooded = function (){
+  var isWarmBlooded = null;
+  switch( this.species ){
+    case 'Fish':
+      isWarmBlooded = false;
+      break;
+    case 'Monkey':
+      isWarmBlooded = true;
+      break;
+    case 'Bird':
+      isWarmBlooded = true;
+      break;
+    default:
+      isWarmBlooded = 'Could not determine if warm-blooded';
+      break;
+  }
+
+  return isWarmBlooded;
+};
 
 /* Step 82
  *
