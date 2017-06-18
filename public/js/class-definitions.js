@@ -1556,5 +1556,5 @@ var cookieMonsterBlocked = gingerbread.swipedByCookieMonster( 'Monday' );
  * and assign the values to each variable below.
  *
  */
-var badForYou;
-var goodForYou;
+var badForYou = new Meal( [ 'bacon', 'chips' ] ).containsJunkFood();
+var goodForYou = breakfast.containsJunkFood();
