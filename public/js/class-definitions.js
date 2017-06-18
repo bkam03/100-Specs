@@ -1516,8 +1516,8 @@ var closeAnOpenDoor = automaticDoor.openClose();
  * and assign the values to each variable below.
  *
  */
-var redShoesSize7;
-var blackShoesSize10;
+var redShoesSize7 = rubySlippers.findShoes();
+var blackShoesSize10 = dressShoes.findShoes();
 
 
  /* Step 97
@@ -1526,8 +1526,8 @@ var blackShoesSize10;
  * and assign the values to each variable below.
  *
  */
-var farTooTallAStory;
-var shortStory;
+var farTooTallAStory = twoStory.isATallStory( 2 );
+var shortStory = singleStory.isATallStory( 2 );
 
 
  /* Step 98
