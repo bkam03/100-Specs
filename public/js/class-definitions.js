@@ -800,7 +800,6 @@ Stapler.prototype.staplePapers = function ( numPapers ){
 
 function Scientist ( name, money, age, gender ){
   Person.call( this, name, money, age, gender );
-  console.log( this );
   this.disciplines = [];
   this.discoveries = [];
 
@@ -1422,6 +1421,7 @@ Lightbulb.prototype.flipSwitch = function ( on ){
 
 Cookie.prototype.swipedByCookieMonster = function( dayOfTheWeek ){
   var isCookieSwipingDay = ( dayOfTheWeek === 'Monday' && this.flavor === 'chocolate' );
+  return isCookieSwipingDay;
 };
 
  /* Step 90
@@ -1437,6 +1437,19 @@ Cookie.prototype.swipedByCookieMonster = function( dayOfTheWeek ){
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
+
+Meal.prototype.containsJunkFood = function (){
+  var isContainingJunkFood = false;
+  var junkFoodArray = [ 'chips', 'soda', 'ice cream', 'popcorn', 'candy' ];
+
+  for( var junkFoodCounter = 0; junkFoodCounter < junkFoodArray.length; junkFoodCounter++ ){
+    if( this.foods.indexOf( junkFoodArray[ junkFoodCounter ] ) > -1 ){
+      isContainingJunkFood = true;
+      break;
+    }
+  }
+  return isContainingJunkFood;
+};
 
 
  /* Steps 91 to 100
