@@ -798,7 +798,87 @@ Stapler.prototype.staplePapers = function ( numPapers ){
  *
  */
 
+function Scientist ( name, money, age, gender ){
+  Person.call( this, name, money, age, gender );
+  console.log( this );
+  this.disciplines = [];
+  this.discoveries = [];
 
+}
+
+Scientist.prototype = Object.create( Person.prototype, {
+  constructor : Scientist
+});
+
+Scientist.prototype.addDiscipline = function ( newDiscipline ){
+  this.disciplines.push( newDiscipline );
+  return this.disciplines;
+};
+
+Scientist.prototype.checkDiscipline = function ( disciplineToCheck ){
+  var isScientistDiscipline = false;
+
+  if( this.disciplines.indexOf( disciplineToCheck ) > -1 ){
+    isScientistDiscipline = true;
+  }
+
+  return isScientistDiscipline;
+};
+
+Scientist.prototype.addDiscovery = function ( newDiscovery ){
+  var discoveryString = '';
+  var numOfDiscoveries = 0;
+
+  this.discoveries.push( newDiscovery );
+
+  numOfDiscoveries = this.discoveries.length;
+  discoveryString = `I discovered ${ this.discoveries[0] }`;
+
+
+  if( numOfDiscoveries === 2 ){
+    discoveryString += ` and ${ this.discoveries[1] }`;
+  } else if( numOfDiscoveries > 2 ){
+    for( var i = 1; i < this.discoveries.length; i++ ){
+      if( i < this.discoveries.length -1 ){
+        discoveryString += `, ${ this.discoveries[i] }`;
+      } else {
+        discoveryString += `, and ${ this.discoveries[i] }`;
+      }
+    }
+  }
+/*  if( numOfDiscoveries > 1 ) {
+    for( var i = 1; i < this.discoveries.length; i++ ){
+      if( i < this.discoveries.length -1 ){
+        discoveryString += `, ${ this.discoveries[i] }`;
+      } else {
+        discoveryString += ` and ${ this.discoveries[i] }`;
+      }
+    }
+  }*/
+
+  discoveryString += `.`;
+
+
+  return discoveryString;
+};
+
+/*
+  i discovered a.
+  i discovered a and b.
+  i discovered a, b, and c.
+
+
+  'I discovered a'
+  if 2, add 'and b'
+  if 3+, add
+
+  add '.'
+
+
+'I discovered Gravity, Theory of Relativity and Jesus Christ.'
+/I discovered Gravity, Theory of Relativity, and Jesus Christ./
+
+*/
 /* Step 36
  *
  * Define an ES5 class named "BankAccount" that has properties
