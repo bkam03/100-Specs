@@ -1476,8 +1476,8 @@ var notWarmOrColdAnimal = new Animal( 'Bacteria', 'n/a' ).isWarmBlooded();
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = civic.drive( 'woodlawn dr');
+var forwardDriving = forte.drive( 3 );
 
 
  /* Step 93
