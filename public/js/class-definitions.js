@@ -846,39 +846,11 @@ Scientist.prototype.addDiscovery = function ( newDiscovery ){
       }
     }
   }
-/*  if( numOfDiscoveries > 1 ) {
-    for( var i = 1; i < this.discoveries.length; i++ ){
-      if( i < this.discoveries.length -1 ){
-        discoveryString += `, ${ this.discoveries[i] }`;
-      } else {
-        discoveryString += ` and ${ this.discoveries[i] }`;
-      }
-    }
-  }*/
-
   discoveryString += `.`;
-
 
   return discoveryString;
 };
 
-/*
-  i discovered a.
-  i discovered a and b.
-  i discovered a, b, and c.
-
-
-  'I discovered a'
-  if 2, add 'and b'
-  if 3+, add
-
-  add '.'
-
-
-'I discovered Gravity, Theory of Relativity and Jesus Christ.'
-/I discovered Gravity, Theory of Relativity, and Jesus Christ./
-
-*/
 /* Step 36
  *
  * Define an ES5 class named "BankAccount" that has properties
@@ -1072,6 +1044,15 @@ Scientist.prototype.addDiscovery = function ( newDiscovery ){
  * @param {string} species The animal species
  * @param {string} gender  male or female
  */
+
+ class Animal {
+  constructor ( species, gender ){
+    this.species = species;
+    this.gender = gender;
+  }
+ }
+
+
 
 
 /**
