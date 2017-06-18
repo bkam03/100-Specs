@@ -1372,6 +1372,9 @@ Shape.prototype.getType = function (){
  *
  */
 
+Shoe.prototype.findShoes = function(){
+  return 'found ${ this.color } shoes of size ${ this.size }';
+};
 
  /* Step 87
  *
