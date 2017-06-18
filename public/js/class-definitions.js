@@ -1420,6 +1420,9 @@ Lightbulb.prototype.flipSwitch = function ( on ){
  *
  */
 
+Cookie.prototype.swipedByCookieMonster = function( dayOfTheWeek ){
+  var isCookieSwipingDay = ( dayOfTheWeek === 'Monday' && this.flavor === 'chocolate' );
+};
 
  /* Step 90
  *
