@@ -1045,11 +1045,9 @@ Scientist.prototype.addDiscovery = function ( newDiscovery ){
  * @param {string} gender  male or female
  */
 
- class Animal {
-  constructor ( species, gender ){
+ function Animal ( species, gender ){
     this.species = species;
     this.gender = gender;
-  }
  }
 
 
@@ -1063,11 +1061,9 @@ Scientist.prototype.addDiscovery = function ( newDiscovery ){
  * @param {string} model The vehicle's model
  */
 
- class Vehicle {
-  constructor ( make, model ){
+ function Vehicle ( make, model ){
     this.make = make;
     this.model = model;
-  }
  }
 
 
@@ -1081,14 +1077,12 @@ Scientist.prototype.addDiscovery = function ( newDiscovery ){
  *
  */
 
- class Shape {
-  constructor ( sides ){
+ function Shape ( sides ){
     if( sides >= 3 ){
       this.sides = sides;
     } else {
       this.sides = null;
     }
-  }
  }
 
 
@@ -1100,11 +1094,9 @@ Scientist.prototype.addDiscovery = function ( newDiscovery ){
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
 
-class Box {
-  constructor( contents, isOpen ){
+function Box ( contents, isOpen ){
     this.contents = contents;
     this.isOpen = isOpen;
-  }
 }
 
 /**
@@ -1114,10 +1106,8 @@ class Box {
  * @param {boolean} isOpen Whether the door is opened or closed
  */
 
-class Door {
-  constructor ( isOpen ){
+function Door ( isOpen ){
     this.isOpen = isOpen;
-  }
 }
 
 /**
@@ -1128,11 +1118,9 @@ class Door {
  * @param {string} color The shoe color
  */
 
- class Shoe {
-  constructor ( size, color ){
+ function Shoe ( size, color ){
     this.size = size;
     this.color = color;
-  }
  }
 
 
@@ -1143,10 +1131,8 @@ class Door {
  * @param {number} stories How many stories tall the house is
  */
 
- class House {
-  constructor ( stories ){
+ function House ( stories ){
     this.stories = stories;
-  }
  }
 
 
@@ -1157,10 +1143,8 @@ class Door {
  * @param {boolean} isOn Whether the light is on or off
  */
 
-class Lightbulb {
-  constructor ( isOn ){
+function Lightbulb ( isOn ){
     this.isOn = isOn;
-  }
 }
 
 /**
@@ -1170,10 +1154,8 @@ class Lightbulb {
  * @param {string} flavor The cookie's flavor
  */
 
-class Cookie {
-  constructor ( flavor ){
+function Cookie ( flavor ){
     this.flavor = flavor;
-  }
 }
 
 /**
@@ -1183,10 +1165,8 @@ class Cookie {
  * @param {Array} foods All the foods in the meal
  */
 
-class Meal {
-  constructor ( foods ){
+function Meal ( foods ){
     this.foods = foods;
-  }
 }
 
 /**
@@ -1201,7 +1181,7 @@ var nemo = new Animal( 'Fish', 'male' );
 
 // Create 2 different vehicles
 var civic = new Vehicle( 'Honda', 'Civic' );
-var forte = new Vehicle( 'Kia', 'Forte' );
+var forte = new Vehicle( 'KIA', 'Forte' );
 
 // Create 2 shapes with different numbers of sides
 var square;
