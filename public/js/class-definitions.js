@@ -1373,7 +1373,7 @@ Shape.prototype.getType = function (){
  */
 
 Shoe.prototype.findShoes = function(){
-  return 'found ${ this.color } shoes of size ${ this.size }';
+  return `Found ${ this.color } shoes of size ${ this.size }`;
 };
 
  /* Step 87
@@ -1403,6 +1403,14 @@ House.prototype.isATallStory = function ( storiesTooTall ){
  *
  */
 
+Lightbulb.prototype.flipSwitch = function ( on ){
+  if( on === 'on' ){
+    this.isOn = true;
+  } else {
+    this.isOn = false;
+  }
+  return this.isOn;
+};
 
  /* Step 89
  *
