@@ -1496,8 +1496,8 @@ var polygon = new Shape( 123 ).getType();
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+var openAClosedBox = christmasPresent.openBox();
+var closeAnOpenBox = catBox.openBox();
 
 
  /* Step 95
