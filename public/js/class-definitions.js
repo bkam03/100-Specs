@@ -62,7 +62,7 @@ var galilean_moons = [ 'Io', 'Europa', 'Ganymede', 'Callisto' ];
  *
  */
 
- var earths_water_composition = .71;
+ var earths_water_composition = 0.71;
 
 
 /* Step 8
@@ -1205,7 +1205,6 @@ var twoStory = new House( 2 );
 // Create 2 lightbulbs
 var incandescent = new Lightbulb( true );
 var halogen = new Lightbulb( false );
-console.log(halogen);
 
 // Create 2 cookies of different flavors
 var chocolateChip = new Cookie( 'chocolate' );
