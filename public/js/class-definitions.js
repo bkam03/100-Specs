@@ -1189,8 +1189,7 @@ var hexagon = new Shape( 6 );
 // Create 2 boxes
 var cat = new Animal( 'Cat', 'female' );
 var catBox = new Box( cat , true );
-var christmasPresent = new Box( 'x', false );
-
+var christmasPresent = new Box( 'present', false );
 // Create 2 doors
 var automaticDoor = new Door( true );
 var bankVault = new Door( false );
@@ -1206,6 +1205,7 @@ var twoStory = new House( 2 );
 // Create 2 lightbulbs
 var incandescent = new Lightbulb( true );
 var halogen = new Lightbulb( false );
+console.log(halogen);
 
 // Create 2 cookies of different flavors
 var chocolateChip = new Cookie( 'chocolate' );
@@ -1496,7 +1496,8 @@ var polygon = new Shape( 123 ).getType();
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox = christmasPresent.openBox();
+var redBox = new Box( 'dvds', false );
+var openAClosedBox = redBox.openBox();
 var closeAnOpenBox = catBox.openBox();
 
 
@@ -1506,8 +1507,9 @@ var closeAnOpenBox = catBox.openBox();
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor = bankVault.openClose();
-var closeAnOpenDoor = automaticDoor.openClose();
+var sewerDrain = new Door( true );
+var closeAnOpenDoor = sewerDrain.openClose();
+var openAClosedDoor = sewerDrain.openClose();
 
 
 /* Step 96
@@ -1536,8 +1538,9 @@ var shortStory = singleStory.isATallStory( 2 );
  * and assign the values to each variable below.
  *
  */
-var kitchenLightsOn = halogen.flipSwitch( 'on' );
-var porchLightsOff = incandescent.flipSwitch( 'off' );
+var trunkLight = new Lightbulb( false );
+var kitchenLightsOn = trunkLight.flipSwitch( 'on' );
+var porchLightsOff = trunkLight.flipSwitch( 'off' );
 
 
  /* Step 99
