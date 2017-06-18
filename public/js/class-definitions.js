@@ -1546,8 +1546,8 @@ var porchLightsOff = incandescent.flipSwitch( 'off' );
  * and assign the values to each variable below.
  *
  */
-var cookieMonsterPwns;
-var cookieMonsterBlocked;
+var cookieMonsterPwns = chocolateChip.swipedByCookieMonster( 'Monday' );
+var cookieMonsterBlocked = gingerbread.swipedByCookieMonster( 'Monday' );
 
 
  /* Step 100
